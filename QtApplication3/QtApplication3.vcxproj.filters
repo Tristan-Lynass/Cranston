@@ -28,6 +28,12 @@
     <Filter Include="Header Files\gui">
       <UniqueIdentifier>{1e7fd2d9-1e74-4034-9b30-38651db69997}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\wlan">
+      <UniqueIdentifier>{8a818256-3299-4830-ac73-114f841e594c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\wlan">
+      <UniqueIdentifier>{5bf6ef53-6a99-4741-a785-3a01256e94fe}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -45,12 +51,24 @@
     <ClCompile Include="attack_view.cpp">
       <Filter>Source Files\gui</Filter>
     </ClCompile>
+    <ClCompile Include="interface_utils.cpp">
+      <Filter>Source Files\wlan</Filter>
+    </ClCompile>
+    <ClCompile Include="security.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="flash.svg">
       <Filter>Resource Files</Filter>
     </None>
     <None Include="notepad.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="play.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="close.svg">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
@@ -66,6 +84,12 @@
     </ClInclude>
     <ClInclude Include="attack_view.h">
       <Filter>Header Files\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="security.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="interface_utils.h">
+      <Filter>Header Files\wlan</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

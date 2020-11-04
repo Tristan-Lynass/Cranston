@@ -88,17 +88,23 @@
   <ItemGroup>
     <ClCompile Include="application.cpp" />
     <ClCompile Include="attack_view.cpp" />
+    <ClCompile Include="interface_utils.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="security.cpp" />
     <ClCompile Include="sidebar.cpp" />
     <ClCompile Include="util.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="close.svg" />
     <None Include="flash.svg" />
     <None Include="notepad.svg" />
+    <None Include="play.svg" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="application.h" />
     <ClInclude Include="attack_view.h" />
+    <ClInclude Include="interface_utils.h" />
+    <ClInclude Include="security.h" />
     <ClInclude Include="sidebar.h" />
     <ClInclude Include="util.h" />
   </ItemGroup>
