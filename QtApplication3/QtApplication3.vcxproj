@@ -95,10 +95,13 @@
     <ClCompile Include="util.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="checked.svg" />
     <None Include="close.svg" />
     <None Include="flash.svg" />
     <None Include="notepad.svg" />
     <None Include="play.svg" />
+    <None Include="tick.svg" />
+    <None Include="tick_1.svg" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="application.h" />
@@ -107,6 +110,9 @@
     <ClInclude Include="security.h" />
     <ClInclude Include="sidebar.h" />
     <ClInclude Include="util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Roboto-Regular.ttf" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

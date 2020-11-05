@@ -7,7 +7,7 @@
 static QPushButton* SetupMenuButton(const char* iconUri) {
 	QPushButton* button = new QPushButton;
 	button->setCursor(Qt::PointingHandCursor);
-	button->setIcon(*ColoredIcon(iconUri, 255, 255, 255));
+	button->setIcon(*ColoredIcon(iconUri, 255, 255, 255, 1));
 	button->setIconSize(QSize(40, 40));
 	button->setStyleSheet("	.QPushButton { padding: 20px;  border: none;outline:none; } 	.QPushButton:hover { background-color: rgb(42, 45, 53); }");
 

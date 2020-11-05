@@ -18,8 +18,8 @@ QHBoxLayout* columns() {
 	return layout;
 }
 
-QIcon* ColoredIcon(const char* uri, int r, int g, int b) {
-	QColor color(r, g, b);
+QIcon* ColoredIcon(const char* uri, int r, int g, int b, float a) {
+	QColor color(r, g, b, a * 255);
 	QPixmap pixmap = QPixmap(uri);
 	QPainter painter(&pixmap);
 	painter.setCompositionMode(QPainter::CompositionMode_SourceIn);

@@ -34,6 +34,12 @@
     <Filter Include="Source Files\wlan">
       <UniqueIdentifier>{5bf6ef53-6a99-4741-a785-3a01256e94fe}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\icon">
+      <UniqueIdentifier>{29cb1179-8821-47f3-9890-23c7bd46e77e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\font">
+      <UniqueIdentifier>{f757300a-353c-4b87-a8e0-db26e03ff620}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -59,17 +65,26 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="flash.svg">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="notepad.svg">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="play.svg">
-      <Filter>Resource Files</Filter>
+    <None Include="checked.svg">
+      <Filter>Resource Files\icon</Filter>
     </None>
     <None Include="close.svg">
-      <Filter>Resource Files</Filter>
+      <Filter>Resource Files\icon</Filter>
+    </None>
+    <None Include="flash.svg">
+      <Filter>Resource Files\icon</Filter>
+    </None>
+    <None Include="notepad.svg">
+      <Filter>Resource Files\icon</Filter>
+    </None>
+    <None Include="play.svg">
+      <Filter>Resource Files\icon</Filter>
+    </None>
+    <None Include="tick_1.svg">
+      <Filter>Resource Files\icon</Filter>
+    </None>
+    <None Include="tick.svg">
+      <Filter>Resource Files\icon</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -91,5 +106,10 @@
     <ClInclude Include="interface_utils.h">
       <Filter>Header Files\wlan</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Roboto-Regular.ttf">
+      <Filter>Resource Files\font</Filter>
+    </Font>
   </ItemGroup>
 </Project>
