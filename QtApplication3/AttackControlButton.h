@@ -12,7 +12,6 @@ private:
 	const QIcon* START_ENABLED;
 	const QIcon* START_DISABLED;
 	const QIcon* STOP_ENABLED;
-	const QIcon* STOP_DISABLED;
 
 private:
 	void mouseReleaseEvent(QMouseEvent* e) override;
