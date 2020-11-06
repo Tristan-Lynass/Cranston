@@ -46,6 +46,12 @@
     <Filter Include="Resource Files\style">
       <UniqueIdentifier>{97a1c52f-6f03-4226-a926-0c124d19dd6d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\gui\attack">
+      <UniqueIdentifier>{057c56b5-9693-4b31-ae57-b747c3785485}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\attack">
+      <UniqueIdentifier>{8ed10e01-65b5-4934-90de-db4ee59393ac}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -66,8 +72,14 @@
     <ClCompile Include="interface_utils.cpp">
       <Filter>Source Files\wlan\windows</Filter>
     </ClCompile>
+    <ClCompile Include="AttackControlButton.cpp">
+      <Filter>Source Files\gui\attack</Filter>
+    </ClCompile>
     <ClCompile Include="attack_view.cpp">
       <Filter>Source Files\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="InterfaceSelector.cpp">
+      <Filter>Source Files\gui\attack</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -120,5 +132,13 @@
     <Font Include="Roboto-Regular.ttf">
       <Filter>Resource Files\font</Filter>
     </Font>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="AttackControlButton.h">
+      <Filter>Header Files\gui\attack</Filter>
+    </QtMoc>
+    <QtMoc Include="InterfaceSelector.h">
+      <Filter>Header Files\gui\attack</Filter>
+    </QtMoc>
   </ItemGroup>
 </Project>

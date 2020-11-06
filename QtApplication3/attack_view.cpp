@@ -1,80 +1,35 @@
-#include <QtWidgets\QApplication>
-#include <QtWidgets\qpushbutton.h> 
+#include <QApplication>
+#include <QPushButton>
 #include <QtWidgets\qboxlayout.h>
 #include <QTableWidget>
 #include <QLabel>
+#include <QObject>
 
 #include "util.h"
-#include "interface_utils.h"
+#include "AttackControlButton.h"
+#include "InterfaceSelector.h"
 
-class AttackControlButton : public QPushButton {
-	// Q_OBJECT
-
-public:
-	AttackControlButton();
-private:
-	bool isStarted = false;
-	const QIcon* START_ENABLED;
-	const QIcon* START_DISABLED;
-	const QIcon* STOP_ENABLED;
-	const QIcon* STOP_DISABLED;
-private:
-	void mouseReleaseEvent(QMouseEvent* e) override;
-	void start();
-	void stop();
-};
 
 //const QIcon* AttackControlButton::startEnabled = ColoredIcon("play.svg", 255, 255, 255, 1);
 
-AttackControlButton::AttackControlButton() {
-	this->START_ENABLED = ColoredIcon("play.svg", 255, 255, 255, 1);
-	this->START_DISABLED = ColoredIcon("play.svg", 255, 255, 255, .2);
-	this->STOP_ENABLED = ColoredIcon("close.svg", 255, 255, 255, 1);
-	this->STOP_DISABLED = ColoredIcon("close.svg", 255, 255, 255, .2);
-
-	this->setCursor(Qt::PointingHandCursor);
-	this->setAccessibleName("attack-control-btn");
-	this->setFixedWidth(60);
-	this->setFixedHeight(60);
-	this->setIconSize(QSize(20, 20));  
-	this->setIcon(*AttackControlButton::START_DISABLED);
-	this->setDisabled(true);
-	this->ensurePolished();
-}
-
-void AttackControlButton::mouseReleaseEvent(QMouseEvent* e) {
-	if (this->isEnabled()) {
-		this->isStarted = !(this->isStarted);
-		this->isStarted ? start() : stop();
-	}
-}
-
-void AttackControlButton::start() {
-	this->setIcon(*AttackControlButton::STOP_ENABLED);
-}
-
-void AttackControlButton::stop() {
-	this->setIcon(*AttackControlButton::START_ENABLED);
-}
-
-class InterfaceSelector : public QPushButton {
-public:
-	InterfaceSelector();
-};
-
-InterfaceSelector::InterfaceSelector() {
-	this->setText("No WLAN interface selected");
-	this->setCursor(Qt::PointingHandCursor);
-	this->setAccessibleName("interface-selector");
-	this->setFixedWidth(190);
-	this->setFixedHeight(60);
-}
- 
 static QLayout* CreateAttackButton() {
 	QLayout* layout = columns();
 	//layout->setAlignment(Qt::AlignTop);
-	layout->addWidget(new InterfaceSelector());
-	layout->addWidget(new AttackControlButton());
+
+	auto interfaceSelector = new InterfaceSelector;
+	auto attackControlBtn = new AttackControlButton;
+
+	QObject::connect(
+		interfaceSelector,
+		SIGNAL(isValid(bool)),
+		attackControlBtn,
+		SLOT(setEnabled(bool))
+	);
+
+	layout->addWidget(interfaceSelector);
+	layout->addWidget(attackControlBtn);
+
+
 	//layout->setMargin(10);
 
 	return layout;

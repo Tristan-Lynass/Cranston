@@ -1,6 +1,5 @@
 #include <QtWidgets\QApplication>
-#include <QtGui\qpainter.h>
-#include <QtGui\qicon.h>
+#include <QtGui>
 #include <qlayout.h>
 
 

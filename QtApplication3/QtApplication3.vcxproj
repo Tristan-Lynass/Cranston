@@ -93,6 +93,8 @@
       <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|x64'">input</DynamicSource>
       <QtMocFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).moc</QtMocFileName>
     </ClCompile>
+    <ClCompile Include="AttackControlButton.cpp" />
+    <ClCompile Include="InterfaceSelector.cpp" />
     <ClCompile Include="interface_utils.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="security.cpp" />
@@ -111,7 +113,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="application.h" />
+    <QtMoc Include="AttackControlButton.h" />
     <ClInclude Include="attack_view.h" />
+    <QtMoc Include="InterfaceSelector.h" />
     <ClInclude Include="interface_utils.h" />
     <ClInclude Include="security.h" />
     <ClInclude Include="sidebar.h" />
