@@ -1,0 +1,54 @@
+﻿/* https://stackoverflow.com/questions/4925184/qt-stylesheet-syntax-targeting-a-specific-button-not-all-buttons */
+/* https://doc.qt.io/qt-5/stylesheet-reference.html */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none; 
+}
+
+/* Side bar */
+[accessibleName="sidebar"] {
+  background-color: rgb(36, 38, 45);
+}
+
+  [accessibleName="sidebar-btn"] {
+    padding: 20px;
+  }
+  [accessibleName="sidebar-btn"]:hover {
+    background-color: rgb(42, 45, 53);
+  }
+
+/* Attack View */
+[accessibleName="attack-view"] {
+  background-color: rgb(50, 53, 62);
+  font-size: 14px;
+  color: white;
+}
+
+  [accessibleName="attack-results-table"] {
+    background-color: rgb(50, 53, 62);
+  }
+
+  [accessibleName="interface-selector"] {
+    background-color: rgb(58, 60, 68);
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    color: white;
+  }
+
+  [accessibleName="attack-control-btn"] {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: rgba(102, 185, 98, 1);
+  }
+  [accessibleName="attack-control-btn"]:hover {
+    background-color: rgba(102, 185, 98, .9);
+  }
+  [accessibleName="attack-control-btn"]:disabled {
+    background-color: rgba(102, 185, 98, .2);
+  }

@@ -40,6 +40,12 @@
     <Filter Include="Resource Files\font">
       <UniqueIdentifier>{f757300a-353c-4b87-a8e0-db26e03ff620}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\wlan\windows">
+      <UniqueIdentifier>{f2f7fcb0-c04a-40da-badb-1cfb53e60443}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\style">
+      <UniqueIdentifier>{97a1c52f-6f03-4226-a926-0c124d19dd6d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -54,14 +60,14 @@
     <ClCompile Include="application.cpp">
       <Filter>Source Files\gui</Filter>
     </ClCompile>
-    <ClCompile Include="attack_view.cpp">
-      <Filter>Source Files\gui</Filter>
-    </ClCompile>
-    <ClCompile Include="interface_utils.cpp">
-      <Filter>Source Files\wlan</Filter>
-    </ClCompile>
     <ClCompile Include="security.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="interface_utils.cpp">
+      <Filter>Source Files\wlan\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="attack_view.cpp">
+      <Filter>Source Files\gui</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +91,9 @@
     </None>
     <None Include="tick.svg">
       <Filter>Resource Files\icon</Filter>
+    </None>
+    <None Include="style.css">
+      <Filter>Resource Files\style</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -13,10 +13,8 @@ bool IsRunAsElevatedUser() {
                                           DOMAIN_ALIAS_RID_ADMINS,
                                           0, 0, 0, 0, 0, 0,
                                           &administrators);
-    if (isElevated)
-    {
-        if (!CheckTokenMembership(NULL, administrators, &isElevated))
-        {
+    if (isElevated) {
+        if (!CheckTokenMembership(NULL, administrators, &isElevated)) {
             isElevated = FALSE;
         }
         FreeSid(administrators);

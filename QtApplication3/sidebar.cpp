@@ -9,7 +9,7 @@ static QPushButton* SetupMenuButton(const char* iconUri) {
 	button->setCursor(Qt::PointingHandCursor);
 	button->setIcon(*ColoredIcon(iconUri, 255, 255, 255, 1));
 	button->setIconSize(QSize(40, 40));
-	button->setStyleSheet("	.QPushButton { padding: 20px;  border: none;outline:none; } 	.QPushButton:hover { background-color: rgb(42, 45, 53); }");
+	button->setAccessibleName("sidebar-btn");
 
 	return button;
 }
@@ -24,6 +24,7 @@ QWidget* CreateSidebar() {
 	menu->addWidget(SetupMenuButton("notepad.svg")); // Captures
 
 	QWidget* wrapper = new QWidget;
+	wrapper->setAccessibleName("sidebar");
 	wrapper->setLayout(menu);
 	wrapper->setFixedWidth(100);
 	return wrapper;
