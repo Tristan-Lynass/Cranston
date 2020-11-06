@@ -9,7 +9,6 @@ public:
 	AttackControlButton();
 
 private:
-	bool isStarted;
 	const QIcon* START_ENABLED;
 	const QIcon* START_DISABLED;
 	const QIcon* STOP_ENABLED;
@@ -17,8 +16,7 @@ private:
 
 private:
 	void mouseReleaseEvent(QMouseEvent* e) override;
-	void start();
-	void stop();
+	void reset();
 
 public slots:
 	void setEnabled(bool isEnabled);

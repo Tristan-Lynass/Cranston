@@ -30,7 +30,7 @@ QString* printInterfaces() {
         //wprintf(L"Interface Description: %ws\n", interfaceInfo->);
         //wprintf(L"\n");
     }
-    return new QString("Could not find interface");
+    return new QString("No connected wireless NICs connected");
 }
 
 //void PrintWlanInterface(PWLAN_INTERFACE_INFO interfaceInfo) {

@@ -20,17 +20,13 @@ static QLayout* CreateAttackButton() {
 	auto attackControlBtn = new AttackControlButton;
 
 	QObject::connect(
-		interfaceSelector,
-		SIGNAL(isValid(bool)),
-		attackControlBtn,
-		SLOT(setEnabled(bool))
+		interfaceSelector, SIGNAL(isValid(bool)),
+		attackControlBtn, SLOT(setEnabled(bool))
 	);
 
 	layout->addWidget(interfaceSelector);
 	layout->addWidget(attackControlBtn);
-
-
-	//layout->setMargin(10);
+	 
 
 	return layout;
 }
@@ -40,7 +36,6 @@ static QLayout* ChecklistItem(const char* title) {
 	QPushButton* icon = new QPushButton();
 	icon->setIcon(*ColoredIcon("checked.svg", 102, 185, 98, 1));
 	icon->setIconSize(QSize(11, 11));
-	//icon->setDisabled(true);
 	icon->setFixedWidth(15);
 
 
