@@ -3,8 +3,7 @@
 #include <wlanapi.h>
 #include <iostream>
 
-#include "security.h"
-#include "interface_utils.h"
+#include "security.h" 
 #include "application.h"
 
 #pragma comment(lib, "Wlanapi.lib")
