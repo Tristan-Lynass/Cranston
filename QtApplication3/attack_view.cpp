@@ -34,12 +34,13 @@ static QLayout* CreateAttackButton() {
 static QLayout* ChecklistItem(const char* title) {
 	
 	QPushButton* icon = new QPushButton();
-	icon->setIcon(*ColoredIcon("checked.svg", 102, 185, 98, 1));
-	icon->setIconSize(QSize(11, 11));
+	icon->setIcon(*ColoredIcon("check.svg", 102, 185, 98, 1));
+	icon->setIconSize(QSize(13, 13));
 	icon->setFixedWidth(15);
 
 
 	auto label = new QLabel(title);
+	label->setAccessibleName("checklist-item-label");
 	label->setFixedHeight(19);
 	label->setFixedWidth(150);
 
@@ -47,7 +48,7 @@ static QLayout* ChecklistItem(const char* title) {
 	layout->addWidget(icon);
 	layout->addWidget(label);
 	layout->setMargin(0);
-	layout->setSpacing(3);
+	layout->setSpacing(7);
 
 	return layout;
 }

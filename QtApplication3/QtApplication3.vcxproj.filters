@@ -107,6 +107,45 @@
     <None Include="style.css">
       <Filter>Resource Files\style</Filter>
     </None>
+    <None Include="C:\Users\Tristan\Desktop\icons\two-settings-cogwheels.svg">
+      <Filter>Resource Files\icon</Filter>
+    </None>
+    <None Include="C:\Users\Tristan\Desktop\icons\gear (1).svg">
+      <Filter>Resource Files\icon</Filter>
+    </None>
+    <None Include="C:\Users\Tristan\Desktop\icons\gear.svg">
+      <Filter>Resource Files\icon</Filter>
+    </None>
+    <None Include="C:\Users\Tristan\Desktop\icons\cog-wheel-silhouette.svg">
+      <Filter>Resource Files\icon</Filter>
+    </None>
+    <None Include="C:\Users\Tristan\Desktop\icons\gear-option.svg">
+      <Filter>Resource Files\icon</Filter>
+    </None>
+    <None Include="C:\Users\Tristan\Desktop\icons\settings.svg">
+      <Filter>Resource Files\icon</Filter>
+    </None>
+    <None Include="gear.svg">
+      <Filter>Resource Files\icon</Filter>
+    </None>
+    <None Include="gear-option.svg">
+      <Filter>Resource Files\icon</Filter>
+    </None>
+    <None Include="settings.svg">
+      <Filter>Resource Files\icon</Filter>
+    </None>
+    <None Include="two-settings-cogwheels.svg">
+      <Filter>Resource Files\icon</Filter>
+    </None>
+    <None Include="cog-wheel-silhouette.svg">
+      <Filter>Resource Files\icon</Filter>
+    </None>
+    <None Include="gear (1).svg">
+      <Filter>Resource Files\icon</Filter>
+    </None>
+    <None Include="check.svg">
+      <Filter>Resource Files\icon</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="util.h">

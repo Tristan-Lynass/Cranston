@@ -1,5 +1,6 @@
 #pragma once
 
+#include <QLabel>
 #include <QPushButton>
 
 class InterfaceSelector : public QPushButton {
@@ -7,6 +8,8 @@ class InterfaceSelector : public QPushButton {
 
 public:
 	InterfaceSelector();
+private:
+	QLabel* label;
 private:
 	void mouseReleaseEvent(QMouseEvent* e) override;
 signals:
